@@ -67,7 +67,8 @@ h1 {
         display: block;
     }
     .main-container .box-1, .main-container .box-2, .main-container .box-3 {
-        width: 100%;
+        width: 95%;
+        margin-left: 2%;
         margin-bottom: 3%;
     }
 }
