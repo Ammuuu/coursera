@@ -98,9 +98,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
         // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
         // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
         // variable's name implies it expects.
-        var chosenCategoryShortName = chooseRandomCategory(categories);
-        console.log(chosenCategoryShortName)
-
+        var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
 
         // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
         // chosen category from STEP 2. Use existing insertProperty function for that purpose.
@@ -112,10 +110,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
         // $dc.loadMenuItems('L')
         // Hint: you need to surround the chosen category short name with something before inserting
         // it into the home html snippet.
-        console.log(homeHtml)
-        var homeHtmlToInsertIntoMainPage = JSON.stringify(chosenCategoryShortName);
-        console.log(homeHtmlToInsertIntoMainPage)
-        homeHtml = insertProperty(homeHtml, "randomCategoryShortName", homeHtmlToInsertIntoMainPage);
+        homeHtml = insertProperty(homeHtml, "randomCategoryShortName", "'" + chosenCategoryShortName + "'");
         console.log(homeHtml)
 
         // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
